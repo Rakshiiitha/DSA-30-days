@@ -1,0 +1,25 @@
+507. Perfect Number
+
+Example 1:
+Input: num = 28
+Output: true
+Explanation: 28 = 1 + 2 + 4 + 7 + 14
+1, 2, 4, 7, and 14 are all divisors of 28.
+
+Example 2:
+Input: num = 7
+Output: false
+
+SOLUTION:
+
+class Solution {
+    public boolean checkPerfectNumber(int num) {
+        int s=0;
+        for(int i=1;i<num;i++){
+            if(num%i==0){
+                s+=i;
+            }
+        }
+        return s==num;
+    }
+}
